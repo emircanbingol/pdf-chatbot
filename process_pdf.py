@@ -1,7 +1,7 @@
-import fitz  # PyMuPDF
+import pdfplumber  # PyMuPDF
 
 def extract_text_by_page(pdf_path):
-    doc = fitz.open(pdf_path)
+    doc = pdfplumber.open(pdf_path)
     all_chunks = []
 
     for page_number, page in enumerate(doc, start=1):
