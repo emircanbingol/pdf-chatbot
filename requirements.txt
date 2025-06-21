@@ -6,5 +6,5 @@ PyPDF2==3.0.1
 pdfplumber
 pdfminer.six==20221105
 sentence-transformers==2.6.1
-faiss-cpu==1.7.4
+faiss-cpu==1.7.2.post2
 google-cloud-storage==2.16.0
