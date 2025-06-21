@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document Chat Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Document Chat Assistant</h1>
+
+        <!-- Upload -->
+        <form id="upload-form" enctype="multipart/form-data">
+            <input type="file" id="pdf-file" name="file" accept="application/pdf">
+            <button type="submit">Upload</button>
+        </form>
+
+        <div id="popup" class="popup">Uploaded successfully</div>
+
+        <!-- PDF List -->
+        <div class="pdf-list">
+            <h2>Uploaded PDFs</h2>
+            <ul id="pdfs"></ul>
+        </div>
+
+        <!-- Chat -->
+        <div class="chat-box">
+            <h2>Ask your documents</h2>
+            <div id="chat-history"></div>
+            <input type="text" id="user-input" placeholder="Type your question...">
+            <button id="send-btn">Send</button>
+        </div>
+
+        <!-- Theme toggle -->
+        <div class="toggle-container">
+            <label for="mode-toggle">Dark Mode</label>
+            <input type="checkbox" id="mode-toggle">
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
